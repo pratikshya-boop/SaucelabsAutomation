@@ -133,6 +133,12 @@ send_keys_to_element(driver, search_field, "Grey Jacket")
 
 time.sleep(2)
 
+#Assertion for search
+if "grey+jacket" in driver.current_url:
+     print("The product is searched")
+else:
+    print("The product is not searched")
+
  #For add to cart
 #first select product
 click_product = "//a[@id='product-1']"
